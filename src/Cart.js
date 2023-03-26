@@ -25,7 +25,7 @@ export default function Cart() {
               {items.map((item, index) => (
                 <tr key={index}>
                   <td>
-                    <img src={item.img} style={{ height: "6rem" }} />
+                    <img alt="" src={item.img} style={{ height: "6rem" }} />
                   </td>
                   <td>{item.title}</td>
                   <td>{item.price}</td>
