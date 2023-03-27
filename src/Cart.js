@@ -17,10 +17,12 @@ export default function Cart() {
     <section className="py-4 container">
       <div className="row justify-content-center">
         <div className="col-12">
-          <h5>
-            cart ({totalUniqueItems}) total items: ({totalItems})
+          <h5 style={{color:"white"}}>
+            <b>Products</b> : {totalUniqueItems}
+            <br />
+             <b>Total Products quantity</b> : {totalItems}
           </h5>
-          <table className="table table-light table-hover m-0 text-center">
+          <table className="table table-dark table-hover m-0 text-center">
             <tbody>
               {items.map((item, index) => (
                 <tr key={index}>
@@ -64,7 +66,7 @@ export default function Cart() {
           </table>
         </div>
         <div className="col-auto ms-auto">
-          <h2>Total Price : {cartTotal + "$"}</h2>
+          <h2 style={{color:"white"}}>Total Price : {cartTotal + "$"}</h2>
         </div>
         <div className="col-auto">
             <button onClick={() => emptyCart()} className="btn btn-danger ">Remove all items</button>
